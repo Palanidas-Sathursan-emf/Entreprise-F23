@@ -29,10 +29,11 @@ public final class DonneesExemple {
         racine.ajouter(new DocumentExcel("budget", dateDeBase, 3500));
         racine.ajouter(new DocumentPdf("consigne", dateDeBase, 1200));
         racine.ajouter(new DocumentWord("courrier", dateDeBase.plusDays(1), 2400));
-        racine.ajouter(new ImagePng("photo", dateDeBase.plusHours(2), 15000));
+        racine.ajouter(new ImagePng("photo", dateDeBase.plusHours(2), 15000, ".png"));
         racine.ajouter(new VideoMp4("presentation", dateDeBase.minusDays(2), 5000000, 120));
         racine.ajouter(new AudioMp3("musique", dateDeBase, 3000000, 180));
         racine.ajouter(new Dossier("Vide", dateDeBase.plusDays(1).withHour(14)));
+        racine.ajouter(new ImageJpeg("laLigneNoir", dateDeBase.plusDays(2), 15000, ".jpeg"));
         return racine;
     }
 }
