@@ -13,7 +13,7 @@ public final class ImagePng extends Image {
      * @param date   date de modification non nulle
      * @param taille taille en octets, positive ou nulle
      */
-    public ImagePng(String nom, LocalDateTime date, long taille, String extension) {
-        super(nom, date, taille, extension);
+    public ImagePng(String nom, LocalDateTime date, long taille) {
+        super(nom, date, taille, ".png");
     }
 }
