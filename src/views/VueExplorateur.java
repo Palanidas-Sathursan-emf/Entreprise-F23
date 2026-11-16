@@ -10,6 +10,7 @@ import java.util.function.IntFunction;
 import java.util.function.LongFunction;
 import javax.swing.*;
 import models.Element;
+import services.ServiceFormatage;
 
 /**
  * Fenêtre Swing textuelle du système de fichiers.
@@ -35,7 +36,8 @@ public final class VueExplorateur extends JFrame {
     private final JLabel statut = new JLabel("Sélectionnez un élément.");
     private final JLabel media = new JLabel();
     private final JPanel lecteur = new JPanel(new FlowLayout(FlowLayout.LEFT));
-    private LongFunction<String> formateurTaille = taille -> Long.toString(taille);
+    private ServiceFormatage format = new ServiceFormatage();
+    private LongFunction<String> formateurTaille = taille -> format.formaterTaille(taille);
     private IntFunction<String> formateurDuree = duree -> duree + " secondes";
 
     /** Construit la fenêtre et ses composants. */
